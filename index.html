@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Numinix Assesment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header></header>
+      <main>
+        <div class="main_header">
+          <div class="search">
+            <span><img src="./assets/Search.svg" /></span>
+            <input
+              type="text"
+              class="searchInput"
+              placeholder="Find Customer"
+            />
+          </div>
+          <div class="dropdown closed">
+            <div class="menu_head">
+              <p class="icon">Filter by</p>
+              <span><img src="./assets/caret.svg" /></span>
+            </div>
+            <ul class="menu">
+              <li class="asc">Name (A-Z)</li>
+              <li class="desc">Name (Z-A)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="articles" id="userLists"></div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

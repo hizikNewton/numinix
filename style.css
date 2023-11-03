@@ -1,0 +1,272 @@
+:root {
+  --primary: #dd946f;
+  --secondary: #f2f5fa;
+  --text-default: #202223;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--secondary);
+  font-family: Rubik;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-style: normal;
+}
+
+.app {
+  width: 100%;
+}
+
+header {
+  height: 5.75rem;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 9px 6px 24px -2px rgba(0, 0, 0, 0.06);
+}
+
+main {
+  margin: 0 auto;
+  max-width: 84%;
+}
+main .main_header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 78px;
+  gap: 44px;
+  height: 155px;
+}
+
+.main_header .search {
+  position: relative;
+  width: 546px;
+  height: 55px;
+}
+.main_header .search span {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+}
+.main_header input {
+  height: 100%;
+  width: 100%;
+  padding: 3px 20px;
+  padding-left: 48px;
+  font-size: 1rem;
+  border: 0px;
+  border-radius: 8px;
+}
+.main_header input:focus {
+  outline: none;
+}
+
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 44px;
+}
+
+.articles article {
+  width: 21rem;
+  cursor: pointer;
+  position: relative;
+  display: block;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  border-radius: 8px;
+  background: white;
+}
+
+article .article-header {
+  display: flex;
+  flex-direction: column;
+}
+article .article-bio {
+  padding-left: 28px;
+  padding-top: 25px;
+  padding-right: 17px;
+}
+
+.articles article h2 {
+  color: var(--text-default);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.articles article img {
+  max-width: 100%;
+  transform-origin: center;
+  transition: transform 0.4s ease-in-out;
+}
+
+.articles p span {
+  max-width: 25px;
+  max-height: 25px;
+  flex-basis: 25px;
+  flex-shrink: 0;
+  display: flex;
+  place-content: center;
+}
+.articles article p {
+  color: var(--text-default);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 13px;
+  display: flex;
+  column-gap: 13px;
+  align-items: center;
+}
+
+.articles article p span.address {
+  align-self: flex-start;
+}
+.articles article p.username {
+  color: #909090;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.articles article p.catchphrase {
+  color: #51c5ff;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.article-preview {
+  padding-left: 28px;
+  padding-right: 40px;
+  padding-bottom: 33px;
+}
+
+.articles figure {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.articles figure img {
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.articles article:hover figure img {
+  transform: scale(1.5);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* dropdown */
+.dropdown {
+  overflow: hidden;
+  cursor: pointer;
+  height: fit-content;
+
+  font-size: 1rem;
+  z-index: 2;
+}
+.menu_head {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background: #fff;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  padding: 8px 16px;
+  gap: 24px;
+}
+.icon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  height: fit-content;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 9px 6px 24px -2px rgba(0, 0, 0, 0.06);
+}
+
+.menu li {
+  padding: 16px 10px;
+  height: 50px;
+}
+
+.dropdown.closed .menu {
+  height: 0px;
+}
+
+.dropdown.closed span {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 600px) {
+  main {
+    margin: auto 16px;
+    max-width: 100%;
+  }
+  header {
+    height: 65px;
+  }
+  main .main_header {
+    margin-top: 44px;
+    flex-wrap: wrap;
+    justify-content:flex-end;
+    gap: 19px;
+  }
+  .main_header .search {
+    width: 100%;
+  }
+  article .article-header {
+    flex-direction: row-reverse;
+  }
+  .articles figure {
+    width: 106px;
+    height: 109px;
+    flex-shrink: 0;
+    border-radius: 50%;
+  }
+.divider{
+  background: #E8E8E8;
+  height: 1px;
+  margin-block:16px;
+}
+.article-preview,article .article-bio {
+  padding:0;
+}
+article{
+  padding:20px 24px 24px 30px
+}
+
+.articles article h2 {
+  font-size: 1rem;
+}
+.articles article p {
+  font-size: 0.875rem;
+}
+.articles p span {
+  max-width: 20px;
+  max-height: 20px;
+}
+.articles article p.username,.articles article p.catchphrase {
+  font-size: 0.8125rem;
+}
+}
