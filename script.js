@@ -72,7 +72,7 @@ searchEl.addEventListener('input', (event) => {
 });
 
 async function fetchUsers(query) {
-  const response = await fetch('http://jsonplaceholder.typicode.com/users');
+  const response = await fetch('https://jsonplaceholder.typicode.com/users');
   let randomUserApi = await fetch('https://randomuser.me/api?results=10');
   randomUserApi = await randomUserApi.json();
   users = await response.json();
