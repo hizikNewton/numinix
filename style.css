@@ -31,7 +31,7 @@ header {
 
 main {
   margin: 0 auto;
-  max-width: 84%;
+  max-width: calc(100% - 10.5625rem);
 }
 main .main_header {
   display: flex;
